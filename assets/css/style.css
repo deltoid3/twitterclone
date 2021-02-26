@@ -1,0 +1,110 @@
+/* body */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /*TODO ios アドレスバー対応 */
+}
+
+/* header */
+.header {
+  background-color: #11bdff;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+}
+
+.header_title {
+  color: #fff;
+  font-size: 2rem;
+  padding: 16px 0;
+}
+
+.header_title::before {
+  background-image: url(../images/bird.png);
+  background-size: contain;
+  content: '';
+  display: inline-block;
+  height: 40px;
+  margin-right: 16px;
+  vertical-align: middle;
+  width: 40px;
+}
+
+/* main */
+main {
+  flex: 1;
+}
+
+/* user */
+.user_wrapper {
+  height: 100%;
+}
+
+.user_card {
+  border-bottom: 2px solid #ddd;
+  display: flex;
+  /* margin-bottom: 16px; */
+  padding: 16px 24px;
+  vertical-align: top;
+}
+
+.user_card:last-of-type {
+  border-bottom: none;
+}
+
+.user_img {
+  height: 40px;
+  width: 40px;
+}
+
+.user_inner {
+  margin-left: 16px;
+}
+
+.user_name {
+  margin-bottom: 4px;
+}
+.user_text {
+  font-size: 1.2rem;
+}
+
+/* .user_ */
+
+/* article */
+.article {
+  display: none;
+  /* ホーム画面書きたいから非表示にしといた */
+}
+
+/* button */
+.button_wrapper-bottom {
+  background-color: #fff;
+  border-top: 2px solid #ddd;
+  bottom: 0;
+  display: flex;
+  height: 80px;
+  justify-content: space-around;
+  position: sticky;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.button-home {
+  background: url(../images/home.png);
+  background-size: contain;
+  content: '';
+  display: inner-block;
+  height: 40px;
+  width: 40px;
+}
+
+/* .button-write {
+  background: url(../images/write.png);
+  background-size: contain;
+  content: '';
+  display: inner-block;
+  height: 40px;
+  width: 40px;
+} */
