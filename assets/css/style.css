@@ -44,13 +44,14 @@ main {
 }
 
 
-/* user */
-.user_wrapper {
-  height: 100%;
-  display: none;
-  /* TODO 書き込み画面書きたいときはここをdisplay:none */
+/* home */
+.home {
+  /* height: 100%; */
+  /* display: none; */
 }
 
+
+/* user */
 .user_card {
   border-bottom: 2px solid #ddd;
   display: flex;
