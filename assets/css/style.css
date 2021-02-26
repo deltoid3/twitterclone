@@ -1,10 +1,10 @@
-/* body */
 body {
   display: flex;
   flex-direction: column;
   height: 100vh;
   /*TODO ios アドレスバー対応 */
 }
+
 
 /* header */
 .header {
@@ -32,10 +32,12 @@ body {
   width: 40px;
 }
 
+
 /* main */
 main {
   flex: 1;
 }
+
 
 /* user */
 .user_wrapper {
@@ -72,10 +74,11 @@ main {
   font-size: 1.2rem;
 }
 
+
 /* article */
 .article {
+  height: 100%;
   /* display: none; */
-  /* ホーム画面書きたいから非表示にしといた */
 }
 
 .article_text {
@@ -97,7 +100,9 @@ main {
   border: 1px solid;
 }
 
-.article_text__textarea {
+.article_textarea {
+  /* 間に入ってた _text はいらない */
+  /* ブロックの名前(article)だけでよい */
   position: absolute;
   top: 0;
   left: 0;
@@ -118,7 +123,10 @@ main {
   outline: 0;
 }
 
-.button_card-top{
+
+/* button */
+.button_wrapper-top{
+  /* こいつはcardではなくwrapperの役割 */
   display:flex;
   justify-content: space-between;
   font-size:24px;
@@ -138,8 +146,6 @@ main {
   text-align: center;
 }
 
-
-/* button */
 .button_wrapper-bottom {
   background-color: #bbb;
   bottom: 0;
