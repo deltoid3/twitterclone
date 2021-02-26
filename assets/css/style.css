@@ -1,8 +1,13 @@
+/* body */
 body {
   display: flex;
   flex-direction: column;
   height: 100vh;
   /*TODO ios アドレスバー対応 */
+}
+
+.hidden {
+  display: none;
 }
 
 
@@ -140,10 +145,10 @@ main {
 
 .button-tweet{
   background-color: #11bdff;
-  color: white;
   border-radius: 16px;
-  width: 104px;
+  color: white;
   text-align: center;
+  padding: 0 16px;
 }
 
 .button_wrapper-bottom {
@@ -154,6 +159,7 @@ main {
   justify-content: space-around;
   position: sticky;
   padding: 8px 0;
+  vertical-align: center;
   width: 100%;
 }
 
@@ -161,7 +167,7 @@ main {
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 80px;
+  max-height: 80px;
 }
 
 .button_img {
