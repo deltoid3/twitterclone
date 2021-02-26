@@ -108,10 +108,13 @@
     </section>
     <section class="article">
       <div class="button_card-top">
-        <button class="button-cancal" id="js-button-cancel">キャンセル</button>
+        <button class="button-cancel" id="js-button-cancel">キャンセル</button>
         <button class="button-tweet" id="js-button-tweet">ツイート</button>
       </div>
-      <textarea class="article_text"></textarea>
+      <div class="article_text">
+        <div class="article_text__dummy" aria-hidden="true"></div>
+        <textarea id="article_text" class="article_text__textarea"></textarea>
+      </div>
     </section>
   </main>
   <section class="button_wrapper-bottom">
