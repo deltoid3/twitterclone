@@ -108,15 +108,21 @@
     </section>
     <section class="article">
       <div class="button_card-top">
-        <button class="button-cancal js-button-cancel">キャンセル</button>
-        <button class="button-tweet js-button-tweet">ツイート</button>
+        <button class="button-cancal" id="js-button-cancel">キャンセル</button>
+        <button class="button-tweet" id="js-button-tweet">ツイート</button>
       </div>
       <textarea class="article_text"></textarea>
     </section>
   </main>
   <section class="button_wrapper-bottom">
-    <button class="button-home js-button-home">Home</button>
-    <button class="button-write js-button-write">Write</button>
+    <button class="button_inner-bottom" id="js-button-home">
+      <img class="button_img" src="./assets/images/home.png" alt="">
+      Home
+    </button>
+    <button class="button_inner-bottom" id="js-button-write">
+      <img class="button_img" src="./assets/images/pencil.png" alt="">
+      Write
+    </button>
   </section>
 </body>
 <script src="./assets/js/script.js"></script>

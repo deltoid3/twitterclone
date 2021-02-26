@@ -40,6 +40,7 @@ main {
 /* user */
 .user_wrapper {
   height: 100%;
+  /* TODO 書き込み画面書きたいときはここをdisplay:none */
 }
 
 .user_card {
@@ -70,8 +71,6 @@ main {
   font-size: 1.2rem;
 }
 
-/* .user_ */
-
 /* article */
 .article {
   display: none;
@@ -80,31 +79,24 @@ main {
 
 /* button */
 .button_wrapper-bottom {
-  background-color: #fff;
-  border-top: 2px solid #ddd;
+  background-color: #bbb;
   bottom: 0;
+  color: #fff;
   display: flex;
-  height: 80px;
   justify-content: space-around;
   position: sticky;
-  vertical-align: middle;
+  padding: 8px 0;
   width: 100%;
 }
 
-.button-home {
-  background: url(../images/home.png);
-  background-size: contain;
-  content: '';
-  display: inner-block;
-  height: 40px;
-  width: 40px;
+.button_inner-bottom {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 80px;
 }
 
-/* .button-write {
-  background: url(../images/write.png);
-  background-size: contain;
-  content: '';
-  display: inner-block;
-  height: 40px;
-  width: 40px;
-} */
+.button_img {
+  height: 32px;
+  width: 32px;
+}
