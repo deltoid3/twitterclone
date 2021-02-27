@@ -6,8 +6,8 @@ tweetButton.addEventListener('click', () => {
   name.innerHTML = 'george';
 
   const text = document.createElement('p');
-  text.setAttribute('class', 'user_text');
   const textArea = document.getElementById('js-textarea');
+  text.setAttribute('class', 'user_text');
   text.innerHTML = textArea.value;
 
   const inner = document.createElement('div');

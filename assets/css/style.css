@@ -46,7 +46,7 @@ main {
 
 /* home */
 .home {
-  /* height: 100%; */
+  height: 100%;
   /* display: none; */
 }
 
@@ -55,13 +55,8 @@ main {
 .user_card {
   border-bottom: 2px solid #ddd;
   display: flex;
-  /* margin-bottom: 16px; */
   padding: 16px 24px;
   vertical-align: top;
-}
-
-.user_card:last-of-type {
-  border-bottom: none;
 }
 
 .user_img {
@@ -84,7 +79,7 @@ main {
 /* article */
 .article {
   height: 100%;
-  /* display: none; */
+  display: none;
 }
 
 .article_text {
@@ -108,7 +103,7 @@ main {
 
 .article_textarea {
   /* 間に入ってた _text はいらない */
-  /* ブロックの名前(article)だけでよい */
+  /* ブロックの名前(article)とエレメントの名前(textarea)だけでよい */
   position: absolute;
   top: 0;
   left: 0;
