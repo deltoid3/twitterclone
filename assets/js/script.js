@@ -11,8 +11,9 @@ tweetButton.addEventListener('click', () => {
   text.innerHTML = textArea.value;
 
   const inner = document.createElement('div');
-  //TODo 子要素追加 inner.appendChild();
-  // inner.appendChild();
+  inner.setAttribute('class', 'user_inner');
+  inner.appendChild(name);
+  inner.appendChild(text);
 
   const img = document.createElement('img');
   img.setAttribute('class', 'user_img');
@@ -20,16 +21,11 @@ tweetButton.addEventListener('click', () => {
 
   const card = document.createElement('div');
   card.setAttribute('class', 'user_card');
-
+  card.appendChild(img);
+  card.appendChild(inner);
 
   const home = document.getElementById('js-home');
   home.insertAdjacentElement('afterbegin', card);
 })
 
-{/* <div class="user_card">
-<img class="user_img" src="./assets/images/user.png" alt="">
-<div class="user_inner">
-  <p class="user_name">john</p>
-  <p class="user_text">hello :)</p>
-</div>
-</div> */}
+// 画面切り替え
