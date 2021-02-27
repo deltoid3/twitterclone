@@ -29,3 +29,4 @@ tweetButton.addEventListener('click', () => {
 })
 
 // 画面切り替え
+// hiddenクラス(cssの9行目に書いた)をトグルして表示を切り替える
