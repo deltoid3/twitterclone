@@ -1,5 +1,13 @@
-// ツイート処理
+// 要素取得
 const tweetButton = document.getElementById('js-tweet');
+const homeButton = document.getElementById("js-homeBtn");
+const writeButton = document.getElementById("js-write");
+const home = document.getElementById("js-home");
+const article = document.getElementById("js-article");
+const cancel = document.getElementById("js-cancel");
+
+
+// ツイート処理
 tweetButton.addEventListener('click', () => {
   const name = document.createElement('p');
   name.setAttribute('class', 'user_name');
@@ -28,5 +36,39 @@ tweetButton.addEventListener('click', () => {
   home.insertAdjacentElement('afterbegin', card);
 })
 
+
 // 画面切り替え
-// hiddenクラス(cssの9行目に書いた)をトグルして表示を切り替える
+homeButton.addEventListener("click", () =>{
+  home.style.display = "block";
+  article.style.display = "none";
+})
+
+writeButton.addEventListener("click", () =>{
+  home.style.display = "none";
+  article.style.display = "block";
+})
+
+cancel.addEventListener("click", () =>{
+  home.style.display = "block";
+  article.style.display = "none";
+})
+
+tweetButton.addEventListener("click", () =>{
+  home.style.display = "block";
+  article.style.display = "none";
+})
+
+
+window.onload = function(){
+
+  var now = null,
+        max = 140,
+        input_area = document.getElementById("js-textarea"),
+        output_area = document.getElementById("js-text_length");
+
+  input_area.onkeyup = function(){
+    now = ( max - input_area.value.length );
+    output_area.innerText = now;
+    output_area.className = ( now < 0 ) ? "out" : "";
+  }
+}
