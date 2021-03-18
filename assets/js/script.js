@@ -1,6 +1,6 @@
 // 要素取得
 const tweetButton = document.getElementById('js-tweet');
-const homeButton = document.getElementById("js-homeBtn");
+const homeButton = document.getElementById("js-home");
 const writeButton = document.getElementById("js-write");
 const home = document.getElementById("js-home");
 const article = document.getElementById("js-article");
