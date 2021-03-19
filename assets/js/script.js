@@ -76,21 +76,3 @@ tweetButton.addEventListener("click", () => {
   home.style.display = "block";
   article.style.display = "none";
 })
-<<<<<<< HEAD
-
-
-window.onload = function(){
-
-  var now = "",
-      max = 140,
-      input_area = document.getElementById("js-textarea"),
-      output_area = document.getElementById("js-text_length");
-
-  input_area.onkeyup = function(){
-    now = ( max - input_area.value.length );
-    output_area.innerText = now;
-    output_area.className = ( now < 0 ) ? "out" : "";
-  }
-}
-=======
->>>>>>> develop
