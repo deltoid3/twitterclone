@@ -1,13 +1,5 @@
-// 要素取得
-const tweetButton = document.getElementById('js-tweet');
-const homeButton = document.getElementById("js-home");
-const writeButton = document.getElementById("js-write");
-const home = document.getElementById("js-home");
-const article = document.getElementById("js-article");
-const cancel = document.getElementById("js-cancel");
-
-
 // ツイート処理
+const tweetButton = document.getElementById('js-tweet');
 tweetButton.addEventListener('click', () => {
   const name = document.createElement('p');
   name.setAttribute('class', 'user_name');
@@ -36,8 +28,13 @@ tweetButton.addEventListener('click', () => {
   home.insertAdjacentElement('afterbegin', card);
 })
 
-
 // 画面切り替え
+const homeButton = document.getElementById("js-homeBtn");
+const writeButton = document.getElementById("js-write");
+const home = document.getElementById("js-home");
+const article = document.getElementById("js-article");
+const cancel = document.getElementById("js-cancel");
+
 homeButton.addEventListener("click", () =>{
   home.style.display = "block";
   article.style.display = "none";
@@ -53,19 +50,9 @@ cancel.addEventListener("click", () =>{
   article.style.display = "none";
 })
 
-tweetButton.addEventListener("click", () =>{
-  home.style.display = "block";
-  article.style.display = "none";
-})
-
-
 window.onload = function(){
 
-<<<<<<< HEAD
   var now = null,
-=======
-  var now = "",
->>>>>>> develop
         max = 140,
         input_area = document.getElementById("js-textarea"),
         output_area = document.getElementById("js-text_length");
@@ -76,3 +63,7 @@ window.onload = function(){
     output_area.className = ( now < 0 ) ? "out" : "";
   }
 }
+
+
+
+// hiddenクラス(cssの9行目に書いた)をトグルして表示を切り替える
