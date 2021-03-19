@@ -1,10 +1,12 @@
 // 要素取得
 const tweetButton = document.getElementById('js-tweet');
-const homeButton = document.getElementById("js-home");
-const writeButton = document.getElementById("js-write");
+const homeButton = document.getElementById("js-homeButton");
+const writeButton = document.getElementById("js-writeButton");
 const home = document.getElementById("js-home");
 const article = document.getElementById("js-article");
 const cancel = document.getElementById("js-cancel");
+const textarea = document.getElementById("js-textarea");
+const textLength = document.getElementById("js-text_length");
 
 
 // ツイート処理
@@ -36,39 +38,41 @@ tweetButton.addEventListener('click', () => {
   home.insertAdjacentElement('afterbegin', card);
 })
 
+const countText = () => {
+  const max = 140;
+  const now = (max - textarea.value.length);
+  textLength.innerText = now + " / " + max;
+  if(now < 0 ) {
+    tweetButton.style.display = "none";
+  } else {
+    tweetButton.style.display = "block";
+  }
+}
+
+textarea.addEventListener("input", countText);
+
 
 // 画面切り替え
-homeButton.addEventListener("click", () =>{
-  home.style.display = "block";
+homeButton.addEventListener("click", () => {
   article.style.display = "none";
+  home.style.display = "block";
 })
 
-writeButton.addEventListener("click", () =>{
+writeButton.addEventListener("click", () => {
   home.style.display = "none";
   article.style.display = "block";
 })
 
-cancel.addEventListener("click", () =>{
+cancel.addEventListener("click", () => {
+  textarea.value = "";
+  countText();
   home.style.display = "block";
   article.style.display = "none";
 })
 
-tweetButton.addEventListener("click", () =>{
+tweetButton.addEventListener("click", () => {
+  textarea.value = "";
+  countText();
   home.style.display = "block";
   article.style.display = "none";
 })
-
-
-window.onload = function(){
-
-  var now = "",
-        max = 140,
-        input_area = document.getElementById("js-textarea"),
-        output_area = document.getElementById("js-text_length");
-
-  input_area.onkeyup = function(){
-    now = ( max - input_area.value.length );
-    output_area.innerText = now;
-    output_area.className = ( now < 0 ) ? "out" : "";
-  }
-}
