@@ -61,11 +61,7 @@ tweetButton.addEventListener("click", () =>{
 
 window.onload = function(){
 
-<<<<<<< HEAD
-  var now = null,
-=======
   var now = "",
->>>>>>> develop
         max = 140,
         input_area = document.getElementById("js-textarea"),
         output_area = document.getElementById("js-text_length");
