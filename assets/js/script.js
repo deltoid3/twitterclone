@@ -13,7 +13,7 @@ const textLength = document.getElementById("js-text_length");
 tweetButton.addEventListener('click', () => {
   const name = document.createElement('p');
   name.setAttribute('class', 'user_name');
-  name.innerHTML = 'george';
+  name.innerHTML = 'me';
 
   const text = document.createElement('p');
   const textArea = document.getElementById('js-textarea');
